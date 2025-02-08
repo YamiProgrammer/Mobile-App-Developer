@@ -22,6 +22,16 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           },
           icon: Icon(Icons.arrow_back_ios),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              debugPrint('Actions');
+            },
+            icon: Icon(
+              Icons.info_outline
+              ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -105,7 +115,8 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
                     isCheckbox = newBool;
                   });
                 }),
-                Image.network('https://blubbyweb.com/wp-content/uploads/2024/02/10000543394622246869468213112.jpg?w=1200')
+            Image.network(
+                'https://blubbyweb.com/wp-content/uploads/2024/02/10000543394622246869468213112.jpg?w=1200')
           ],
         ),
       ),
