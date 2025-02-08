@@ -15,8 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         useMaterial3: false,
       ),
-      home: const RootPage(
-      ),
+      home: const RootPage(),
     );
   }
 }
@@ -34,6 +33,12 @@ class _RootPageState extends State<RootPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          debugPrint('Floating Action Button');
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
